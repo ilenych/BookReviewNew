@@ -2,7 +2,6 @@
 //  SceneDelegate.swift
 //  BookReviewNew
 //
-//  Created by  SENAT on 17.01.2020.
 //  Copyright © 2020 <ASi. All rights reserved.
 //
 
