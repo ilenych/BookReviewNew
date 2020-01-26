@@ -16,11 +16,10 @@ class MainButton: UIButton {
     init(title: String) {
         super.init(frame: .zero)
         setTitle(title, for: .normal)
-        titleLabel?.font = UIFont(name: "CircularStd-Bold", size: 14)
+        titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 15)
         setTitleColor(.white, for: .normal)
-        layer.cornerRadius = 10
+        layer.cornerRadius = 12
         clipsToBounds = true
-        setGradientLayer()
     }
     
     required init?(coder: NSCoder) {
@@ -28,7 +27,7 @@ class MainButton: UIButton {
     }
 }
 
-//MARK: - Extansion
+//MARK: - UIView
 extension UIView {
     func setGradientLayer() {
         let gradientLayer = CAGradientLayer()
