@@ -146,6 +146,9 @@ extension MyBooksViewController: UITableViewDelegate, UITableViewDataSource {
             book = books[indexPath.row]
         }
         descriptionBookViewController.book = book
+        
+        descriptionBookViewController.modalTransitionStyle = .coverVertical
+        descriptionBookViewController.modalPresentationStyle = .overCurrentContext
         self.present(descriptionBookViewController, animated: true, completion: nil)
     }
     

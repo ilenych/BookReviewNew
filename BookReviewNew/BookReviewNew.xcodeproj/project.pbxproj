@@ -20,6 +20,7 @@
 		9738F1CA23D1EB6500F2993F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9738F1C923D1EB6500F2993F /* Assets.xcassets */; };
 		9738F1CD23D1EB6500F2993F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9738F1CB23D1EB6500F2993F /* LaunchScreen.storyboard */; };
 		9738F1D523D1F8E200F2993F /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738F1D423D1F8E200F2993F /* BackgroundView.swift */; };
+		97711A9C23DEF57B00263194 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97711A9B23DEF57B00263194 /* CustomLabel.swift */; };
 		97DD286723D34BDB004DE362 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DD286623D34BDB004DE362 /* MainButton.swift */; };
 		97DF3E3E23D8798F00FE083A /* BookListViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF3E3D23D8798F00FE083A /* BookListViewViewController.swift */; };
 		BEA503062D8B2FAF66B912A8 /* Pods_BookReviewNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFB9AEAA41D725AB6559622 /* Pods_BookReviewNew.framework */; };
@@ -43,6 +44,7 @@
 		9738F1CC23D1EB6500F2993F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9738F1CE23D1EB6500F2993F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9738F1D423D1F8E200F2993F /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		97711A9B23DEF57B00263194 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		97DD286623D34BDB004DE362 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		97DF3E3D23D8798F00FE083A /* BookListViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewViewController.swift; sourceTree = "<group>"; };
 		9EFB9AEAA41D725AB6559622 /* Pods_BookReviewNew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookReviewNew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +156,7 @@
 			children = (
 				97DD286623D34BDB004DE362 /* MainButton.swift */,
 				9738F1D423D1F8E200F2993F /* BackgroundView.swift */,
+				97711A9B23DEF57B00263194 /* CustomLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				9738F1C123D1EB6300F2993F /* AppDelegate.swift in Sources */,
 				9738F1C323D1EB6300F2993F /* SceneDelegate.swift in Sources */,
 				97DF3E3E23D8798F00FE083A /* BookListViewViewController.swift in Sources */,
+				97711A9C23DEF57B00263194 /* CustomLabel.swift in Sources */,
 				972E9CFE23DB076500D802AD /* DescriptionBookViewController.swift in Sources */,
 				972E9CF823DAF2E800D802AD /* BooksModel.swift in Sources */,
 				972E9CF023DAD76300D802AD /* TableViewCell.swift in Sources */,

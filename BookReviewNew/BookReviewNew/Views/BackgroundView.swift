@@ -11,7 +11,7 @@ import UIKit
 class BackgroundView: UIView {
     //MARK: - Variable
     private var navigatitionTitle = UILabel()
-    private var backButton = UIButton()
+    var backButton = UIButton()
     
     //MARK: - Life cycle
     override init(frame: CGRect) {
@@ -22,7 +22,7 @@ class BackgroundView: UIView {
         super.init(frame: CGRect(x: 0, y: 0, width: 400, height: 256))
         
         setupNavigationTitle(title: title)
-        makeLayer()
+        setupLayer()
         setupBackButton(isHidden: buttonIsHidden)
     }
     
@@ -32,7 +32,7 @@ class BackgroundView: UIView {
     
     //MARK: - Setup
     
-    private func makeLayer() {
+    private func setupLayer() {
         //Gradient layeur
         let gradientMaskLayer = CAGradientLayer()
         
@@ -80,10 +80,12 @@ class BackgroundView: UIView {
     private func setupBackButton(isHidden: Bool) {
         self.addSubview(backButton)
         backButton.isHidden = isHidden
+        backButton.setTitle("←", for: .normal)
+        backButton.titleLabel?.font =  .systemFont(ofSize: 35)
         backButton.snp.makeConstraints { (make) in
             make.width.equalTo(50)
             make.height.equalTo(50)
-            make.leading.equalTo(self.snp.leading).offset(32)
+            make.leading.equalTo(self.snp.leading).offset(22)
             make.centerY.equalTo(self.snp.centerY)
         }
     }
