@@ -7,13 +7,14 @@
 - Поиск книг по названию с использованием `SearchBar`
 - Выставления рейтинга книги при помощи pod `Cosmos`
 - Парсинг json  при помощи `LocalService`
+- Работа с `Core Animation`
 
 ## Планировка
 - Подключить `Realm` вместо `LocalService`
 - Переход на `MVVM`
 - Создание dataBase в `BookListViewController`
 - Создание и реализация дизайна `BookListViewController`
-- Длбавление новых обзоров в `MyBooksViewController`
+- Добавление новых обзоров в `MyBooksViewController`
 
 ## Демонстрация
 
