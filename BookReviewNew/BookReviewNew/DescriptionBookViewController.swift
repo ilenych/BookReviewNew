@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class DescriptionBookViewController: UIViewController {
     //MARK: - Variable
@@ -13,7 +14,22 @@ class DescriptionBookViewController: UIViewController {
     private var nameLabeel = CustomLabel(size: 20)
     private var categoryLabel = CustomLabel(size: 14)
     private var descriptionLabel = CustomLabel(size: 14)
-    private var coverBookImage = UIImageView()
+    private var ratings: CosmosView = {
+        let ratings = CosmosView()
+        ratings.settings.starSize = 25.0
+        ratings.settings.filledColor = #colorLiteral(red: 1, green: 0.8543232679, blue: 0.5309451222, alpha: 1)
+        ratings.settings.filledBorderColor = #colorLiteral(red: 1, green: 0.8543232679, blue: 0.5309451222, alpha: 1)
+        ratings.settings.emptyColor = .lightGray
+        ratings.settings.emptyBorderColor = .lightGray
+        ratings.settings.fillMode = .half
+        return ratings
+    }()
+    private var coverBookImage: UIImageView = {
+        let i = UIImageView()
+        i.layer.cornerRadius = 10
+        i.clipsToBounds = true
+        return i
+    }()
     
     var book: Books!
 
@@ -28,6 +44,7 @@ class DescriptionBookViewController: UIViewController {
         setupNameLabel()
         setupCategoryLabel()
         setupDescriptionLabel()
+        setupRetings()
         
         // target
         bgView.backButton.addTarget(self, action: #selector(backView), for: .touchUpInside)
@@ -35,7 +52,7 @@ class DescriptionBookViewController: UIViewController {
     
     //MARK: - Function
     @objc func backView() {
-          dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
       }
     
     //MARK: - Setups
@@ -51,8 +68,6 @@ class DescriptionBookViewController: UIViewController {
     
     fileprivate func setupCoverBookImage() {
         view.addSubview(coverBookImage)
-        coverBookImage.layer.cornerRadius = 10
-        coverBookImage.clipsToBounds = true
         coverBookImage.image = UIImage(named: book.image)
         coverBookImage.snp.makeConstraints { (make) in
             make.width.equalTo(120)
@@ -68,7 +83,7 @@ class DescriptionBookViewController: UIViewController {
         nameLabeel.snp.makeConstraints { (make) in
             make.trailing.equalTo(view.snp.trailing).offset(-32)
             make.leading.equalTo(coverBookImage.snp.trailing).offset(15)
-            make.bottom.equalTo(coverBookImage.snp.centerY)
+            make.top.equalTo(coverBookImage.snp.top).offset(50)
         }
     }
     
@@ -79,7 +94,7 @@ class DescriptionBookViewController: UIViewController {
             make.height.equalTo(30)
             make.leading.equalTo(coverBookImage.snp.trailing).offset(15)
             make.trailing.equalTo(view.snp.trailing).offset(-32)
-            make.top.equalTo(coverBookImage.snp.centerY).offset(5)
+            make.top.equalTo(nameLabeel.snp.bottom).offset(10)
         }
     }
     
@@ -93,25 +108,14 @@ class DescriptionBookViewController: UIViewController {
             make.bottom.lessThanOrEqualTo(view.snp.bottom).offset(-10)
         }
     }
-}
-
-//MARK: - Canvas
-
-import SwiftUI
-
-struct DescriptionBookPreviews: PreviewProvider {
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
     
-    struct ContainerView: UIViewControllerRepresentable {
-        
-        func makeUIViewController(context: UIViewControllerRepresentableContext<DescriptionBookPreviews.ContainerView>) -> UIViewController {
-            return DescriptionBookViewController()
-        }
-        
-        func updateUIViewController(_ uiViewController: DescriptionBookPreviews.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<DescriptionBookPreviews.ContainerView>) {
-            
+    fileprivate func setupRetings() {
+        view.addSubview(ratings)
+        ratings.snp.makeConstraints { (make) in
+            make.bottom.equalTo(coverBookImage.snp.bottom).offset(-10)
+            make.leading.equalTo(coverBookImage.snp.trailing).offset(14)
+            make.width.equalTo(160)
+            make.height.equalTo(25)
         }
     }
 }

@@ -42,26 +42,50 @@
                                 <color key="textColor" red="0.23989570139999999" green="0.30870568749999999" blue="0.47845178840000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars5.0" translatesAutoresizingMaskIntoConstraints="NO" id="bZS-3k-Dre">
-                                <rect key="frame" x="100" y="86" width="82" height="22"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdB-Yf-www" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="100" y="88" width="120" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="qky-do-w5O"/>
+                                    <constraint firstAttribute="height" constant="20" id="Rrt-Zj-NNi"/>
                                 </constraints>
-                            </imageView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                        <color key="value" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                        <color key="value" red="0.94158309699999998" green="0.80485934020000005" blue="0.52935218809999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="updateOnTouch" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="PUb-8X-zMt" secondAttribute="trailing" constant="14" id="5Xs-IF-WFK"/>
-                            <constraint firstAttribute="trailing" secondItem="bZS-3k-Dre" secondAttribute="trailing" constant="75" id="BvJ-c9-VJC"/>
                             <constraint firstItem="PUb-8X-zMt" firstAttribute="top" secondItem="vX5-fl-KyD" secondAttribute="top" constant="8" id="IC1-pU-YJw"/>
                             <constraint firstAttribute="trailing" secondItem="rUK-8X-XPw" secondAttribute="trailing" constant="14" id="MlC-wf-rJT"/>
+                            <constraint firstAttribute="bottom" secondItem="SdB-Yf-www" secondAttribute="bottom" constant="10" id="QUh-VL-prn"/>
                             <constraint firstAttribute="bottom" secondItem="WIP-Ed-drk" secondAttribute="bottom" constant="8" id="S33-Nm-PtB"/>
                             <constraint firstItem="rUK-8X-XPw" firstAttribute="leading" secondItem="WIP-Ed-drk" secondAttribute="trailing" constant="16" id="VsO-1u-peb"/>
                             <constraint firstItem="rUK-8X-XPw" firstAttribute="top" secondItem="PUb-8X-zMt" secondAttribute="bottom" constant="6" id="Xsi-fj-chA"/>
-                            <constraint firstAttribute="bottom" secondItem="bZS-3k-Dre" secondAttribute="bottom" constant="10" id="kA2-hy-HEG"/>
                             <constraint firstItem="PUb-8X-zMt" firstAttribute="leading" secondItem="WIP-Ed-drk" secondAttribute="trailing" constant="16" id="lMj-69-18Z"/>
+                            <constraint firstAttribute="trailing" secondItem="SdB-Yf-www" secondAttribute="trailing" constant="37" id="ob9-uH-oCg"/>
                             <constraint firstItem="WIP-Ed-drk" firstAttribute="leading" secondItem="vX5-fl-KyD" secondAttribute="leading" constant="14" id="oqv-n5-Xm0"/>
-                            <constraint firstItem="bZS-3k-Dre" firstAttribute="leading" secondItem="WIP-Ed-drk" secondAttribute="trailing" constant="16" id="xe4-pp-VWi"/>
+                            <constraint firstItem="SdB-Yf-www" firstAttribute="leading" secondItem="WIP-Ed-drk" secondAttribute="trailing" constant="16" id="sUW-5G-FDn"/>
                             <constraint firstItem="WIP-Ed-drk" firstAttribute="top" secondItem="vX5-fl-KyD" secondAttribute="top" constant="8" id="xf1-AK-XvM"/>
                         </constraints>
                     </view>
@@ -78,12 +102,9 @@
                 <outlet property="categoryLabel" destination="rUK-8X-XPw" id="QrS-yl-7YA"/>
                 <outlet property="coverBookImageView" destination="WIP-Ed-drk" id="ng3-ri-Oa9"/>
                 <outlet property="nameLabel" destination="PUb-8X-zMt" id="Zek-Z0-ue9"/>
-                <outlet property="ratingImageView" destination="bZS-3k-Dre" id="4v2-gK-zYb"/>
+                <outlet property="ratingView" destination="SdB-Yf-www" id="348-nh-LdU"/>
             </connections>
             <point key="canvasLocation" x="-76.08695652173914" y="117.1875"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="stars5.0" width="416" height="72"/>
-    </resources>
 </document>
